@@ -15,29 +15,25 @@ clear.onclick = () => clearAll()
 function clearAll(){
     display.textContent = "";
 }
-function multiplication(a, b) {
-    return a * b;
-}
-
-function division(a, b) {
-    return a / b;
-}
-
-function addition(a, b) {
-    return a + b;
-}
-
-function subtraction(a, b) {
-    return a - b;
-}
-
-let firstOperand = " ";
+let firstOperand = " "
 let secondOperand = " ";
 
 function displayScreen(num){
     display.textContent += num;
-    if(sign.onclick){
-        let firstOperand = display;
-        console.log(firstOperand);
-    }
 }
+
+function operate(operator, firstOperand,secondOperand){
+
+     switch(operator){
+        case "*":
+            return firstOperand * secondOperand;
+        
+        case "/":
+            return firstOperand / secondOperand;
+        
+        case "+":
+            return firstOperand + secondOperand;
+        case "-":
+            return firstOperand - secondOperand;
+     }
+    }
