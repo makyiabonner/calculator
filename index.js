@@ -9,8 +9,12 @@ number.forEach((number) => number.addEventListener('click', () => displayScreen(
 
 //Operator button inputs
 sign.forEach((sign) => sign.addEventListener('click', () => displayScreen(sign.textContent)));
-clear.onclick = () => display.textContent = "";
+clear.onclick = () => clearAll()
 
+//Clear button inputs
+function clearAll(){
+    display.textContent = "";
+}
 function multiplication(a, b) {
     return a * b;
 }
@@ -36,6 +40,4 @@ function displayScreen(num){
         let firstOperand = display;
         console.log(firstOperand);
     }
-    console.log(display);
 }
-
