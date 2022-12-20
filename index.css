@@ -1,0 +1,39 @@
+body{
+    overflow: hidden;
+}
+.calculator{
+    display: grid;
+    height:700px;
+    width: 500px;
+    border: solid 1px black;
+    background-color: grey;
+    border-radius: 40px 40px;
+    justify-content: center;
+    position:absolute;
+    left:35%;
+    top:10%;
+}
+.display{
+    display: grid;
+    height:100px;
+    width: 450px;
+    border: solid 1px black;
+    background-color: black;
+    border-radius: 20px 20px;
+    position: absolute;
+    top:40px;
+    right:25px;
+    color:white;
+}
+.zero{
+    grid-column: span 2
+}
+.buttonNumbers{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3,1fr);
+
+}
+.buttonSigns{
+    display: grid;
+}
