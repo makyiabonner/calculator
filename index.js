@@ -6,6 +6,8 @@ let equal = document.querySelector(".equal");
 
 //button number inputs
 number.forEach((number) => number.addEventListener('click', () => displayScreen(number.textContent)));
+
+//Operator button inputs
 sign.forEach((sign) => sign.addEventListener('click', () => displayScreen(sign.textContent)));
 clear.onclick = () => display.textContent = "";
 
