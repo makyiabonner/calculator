@@ -15,14 +15,18 @@ clear.onclick = () => clearAll();
 function clearAll(){
     display.textContent = "";
 }
+
+//Storage for First and Second Operand;
 let currentOperand = " ";
 let previousOperand = " ";
 
+//Display Screen and Collecting Second Operand
 function displayScreen(num){
     currentOperand += num;
         display.textContent = currentOperand;
 }
 
+//Making Operative buttons functional and Collecting First Operand
 function operate(operator){
     displayScreen("")
     if(operator == "+" || operator == "-" || operator == "*" || operator == "/"){
