@@ -8,18 +8,20 @@ let equal = document.querySelector(".equal");
 number.forEach((number) => number.addEventListener('click', () => displayScreen(number.textContent)));
 
 //Operator button inputs
-sign.forEach((sign) => sign.addEventListener('click', () => displayScreen(sign.textContent)));
-clear.onclick = () => clearAll()
+sign.forEach((sign) => sign.addEventListener('click', () => operate(sign.textContent)));
+clear.onclick = () => clearAll();
 
 //Clear button inputs
 function clearAll(){
     display.textContent = "";
 }
-let firstOperand = " "
+let firstOperand = " ";
 let secondOperand = " ";
 
 function displayScreen(num){
-    display.textContent += num;
+    firstOperand += num;
+        display.textContent = firstOperand;
+    console.log(firstOperand);
 }
 
 function operate(operator, firstOperand,secondOperand){
@@ -27,10 +29,8 @@ function operate(operator, firstOperand,secondOperand){
      switch(operator){
         case "*":
             return firstOperand * secondOperand;
-        
         case "/":
             return firstOperand / secondOperand;
-        
         case "+":
             return firstOperand + secondOperand;
         case "-":
