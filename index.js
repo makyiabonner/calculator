@@ -3,6 +3,7 @@ let sign = document.querySelectorAll(".sign");
 let display = document.querySelector(".display");
 let clear = document.querySelector(".clear");
 let equal = document.querySelector(".equal");
+let prevEquation = document.querySelector(".displayEquation")
 
 //button number inputs
 number.forEach((number) => number.addEventListener('click', () => displayScreen(number.textContent)));
@@ -10,15 +11,12 @@ number.forEach((number) => number.addEventListener('click', () => displayScreen(
 //Operator button inputs
 sign.forEach((sign) => sign.addEventListener('click', () => operate(sign.textContent)));
 clear.onclick = () => clearAll();
-
-//Clear button inputs
-function clearAll(){
-    display.textContent = "";
-}
+equal.onclick = () => display.textContent = calculate(operator,previousOperand, currentOperand);
 
 //Storage for First and Second Operand;
 let currentOperand = " ";
 let previousOperand = " ";
+let operator = " ";
 
 //Display Screen and Collecting Second Operand
 function displayScreen(num){
@@ -27,21 +25,33 @@ function displayScreen(num){
 }
 
 //Making Operative buttons functional and Collecting First Operand
-function operate(operator){
-    displayScreen("")
+function operate(op){
+    operator = op
     if(operator == "+" || operator == "-" || operator == "*" || operator == "/"){
         previousOperand = currentOperand;
-        currentOperand = " "
-        console.log(previousOperand);
+        currentOperand = " ";
             }
-     switch(operator){
+            }
+
+// Doing Math when Equal button pressed
+function calculate(operator,a,b){
+    a = Number(a);
+    b = Number(b);
+    switch(operator){
         case "*":
-            return previousOperand * currentOperand;
+            return currentOperand = a * b; 
         case "/":
-            return previousOperand / currentOperand;
+            return currentOperand = a / b;
         case "+":
-            return previousOperand + currentOperand;
+            return currentOperand = a + b;
         case "-":
-            return previousOperand - currentOperand;
-     }
-    }
+            return currentOperand = a - b;
+             }
+}
+
+//Clear button inputs
+function clearAll(){
+    previousOperand = "";
+    currentOperand = "";
+    display.textContent = "";
+}
