@@ -31,8 +31,10 @@ function decimal(dots){
 
 //Display Screen and Collecting Second Operand
 function displayScreen(num){
+    if(currentOperand.length <= 13){
     currentOperand += num;
          display.textContent = currentOperand;
+    }
 }
 
 //Making Operative buttons functional and Collecting First Operand

@@ -27,18 +27,28 @@ body{
     text-align: right;
     font-size: 70px;
 }
-.zero{
-    grid-column: span 2
+.span-2{
+    grid-column: span 2;
 }
 .buttonNumbers{
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(3,1fr);
     position: relative;
+    top: 12rem;
+    right:5rem;
     width:20rem;
     gap: 1rem;
-
 }
 .buttonSigns{
     display: grid;
+    gap:1rem;
+    position: relative;
+    width:7rem;
+    left:17rem;
+    bottom:7.5rem;
+    border-radius: 100%;
+}
+.number{
+    border-radius: 50%;
 }
