@@ -3,7 +3,6 @@ let sign = document.querySelectorAll(".sign");
 let display = document.querySelector(".display");
 let clear = document.querySelector(".clear");
 let equal = document.querySelector(".equal");
-let prevEquation = document.querySelector(".displayEquation")
 
 //button number inputs
 number.forEach((number) => number.addEventListener('click', () => displayScreen(number.textContent)));
