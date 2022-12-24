@@ -24,6 +24,8 @@ body{
     top:40px;
     right:25px;
     color:white;
+    text-align: right;
+    font-size: 70px;
 }
 .zero{
     grid-column: span 2
@@ -32,6 +34,9 @@ body{
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(3,1fr);
+    position: relative;
+    width:20rem;
+    gap: 1rem;
 
 }
 .buttonSigns{

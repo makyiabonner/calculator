@@ -1,26 +1,38 @@
 let number = document.querySelectorAll(".number")
 let sign = document.querySelectorAll(".sign");
-let display = document.querySelector(".display");
+let display= document.querySelector(".display");
 let clear = document.querySelector(".clear");
 let equal = document.querySelector(".equal");
+let dot = document.querySelector(".dot")
 
 //button number inputs
 number.forEach((number) => number.addEventListener('click', () => displayScreen(number.textContent)));
-
+dot.onclick = () => decimal(".");
 //Operator button inputs
 sign.forEach((sign) => sign.addEventListener('click', () => operate(sign.textContent)));
 clear.onclick = () => clearAll();
-equal.onclick = () => display.textContent = calculate(operator,previousOperand, currentOperand);
+equal.onclick = () =>  display.textContent = calculate(operator,previousOperand, currentOperand);
 
 //Storage for First and Second Operand;
 let currentOperand = " ";
 let previousOperand = " ";
 let operator = " ";
+let dotCount = 0;
+
+//Decimal button input
+function decimal(dots){
+    if(dots = "."){dotCount++;}
+    if(dotCount == 1){
+        currentOperand += ".";
+        display.textContent = currentOperand;
+
+    }
+}
 
 //Display Screen and Collecting Second Operand
 function displayScreen(num){
     currentOperand += num;
-        display.textContent = currentOperand;
+         display.textContent = currentOperand;
 }
 
 //Making Operative buttons functional and Collecting First Operand
@@ -29,6 +41,7 @@ function operate(op){
     if(operator == "+" || operator == "-" || operator == "*" || operator == "/"){
         previousOperand = currentOperand;
         currentOperand = " ";
+        dotCount = 0
             }
             }
 
@@ -52,5 +65,6 @@ function calculate(operator,a,b){
 function clearAll(){
     previousOperand = "";
     currentOperand = "";
-    display.textContent = "";
+    dotCount = 0
+     display.textContent = "";
 }
