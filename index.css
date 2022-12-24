@@ -1,12 +1,18 @@
 body{
     overflow: hidden;
     font-family: 'Poiret One', cursive;
+    animation: 40s mellow infinite  linear;
+}
+@keyframes mellow {
+    0%{background-color:#ff8b8b;}
+    50%{background-color:rgb(148, 255, 148);}
+    100%{background-color:rgb(162, 162, 255);}
 }
 .calculator{
     display: grid;
     height:700px;
     width: 500px;
-    background-color: black;
+    background-color: rgb(255, 0, 0);
     border-radius: 40px 40px;
     justify-content: center;
     position:absolute;
@@ -20,6 +26,7 @@ body{
     width: 450px;
     border: solid 1px black;
     background-color: rgb(199, 199, 199);
+    box-shadow: 5px 5px 15px;
     border-radius: 20px 20px;
     position: absolute;
     top:40px;
@@ -42,7 +49,7 @@ body{
     gap: 1rem;
     
 }
-.number:hover, .sign:hover{
+.number:hover, .sign:hover, .dot:hover{
     background-color: rgb(175, 173, 173);
 }
 .buttonSigns{
@@ -68,6 +75,10 @@ body{
     font-size: 25px;
     border-radius:100px ;
 }
-.clear{
+.clear, .equal{
     background-color: orangered;
+}
+.footer{
+    font-size: 25px;
+    text-align: left;
 }
