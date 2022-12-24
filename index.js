@@ -25,7 +25,6 @@ function decimal(dots){
     if(dotCount == 1){
         currentOperand += ".";
         display.textContent = currentOperand;
-
     }
 }
 
