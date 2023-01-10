@@ -1,84 +1,95 @@
-body{
-    overflow: hidden;
-    font-family: 'Poiret One', cursive;
-    animation: 40s mellow infinite  linear;
+body {
+  overflow: hidden;
+  font-family: "Poiret One", cursive;
+  animation: 40s mellow infinite linear;
 }
 @keyframes mellow {
-    0%{background-color:#ff8b8b;}
-    50%{background-color:rgb(148, 255, 148);}
-    100%{background-color:rgb(162, 162, 255);}
+  0% {
+    background-color: #ff8b8b;
+  }
+  50% {
+    background-color: rgb(148, 255, 148);
+  }
+  100% {
+    background-color: rgb(162, 162, 255);
+  }
 }
-.calculator{
-    display: grid;
-    height:700px;
-    width: 500px;
-    background-color: rgb(255, 0, 0);
-    border-radius: 40px 40px;
-    justify-content: center;
-    position:absolute;
-    left:35%;
-    top:10%;
-    box-shadow: 5px 5px 35px;
+.calculator {
+  display: grid;
+  height: 700px;
+  width: 500px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 40px 40px;
+  justify-content: center;
+  position: absolute;
+  left: 35%;
+  top: 10%;
+  box-shadow: 5px 5px 35px;
 }
-.display{
-    display: grid;
-    height:100px;
-    width: 450px;
-    border: solid 1px black;
-    background-color: rgb(199, 199, 199);
-    box-shadow: 5px 5px 15px;
-    border-radius: 20px 20px;
-    position: absolute;
-    top:40px;
-    right:25px;
-    color:black;
-    text-align: right;
-    font-size: 70px;
+.display {
+  display: grid;
+  height: 100px;
+  width: 450px;
+  border: solid 1px black;
+  background-color: rgb(199, 199, 199);
+  box-shadow: 5px 5px 15px;
+  border-radius: 20px 20px;
+  position: absolute;
+  top: 40px;
+  right: 25px;
+  color: black;
+  text-align: right;
+  font-size: 70px;
 }
-.span-2{
-    grid-column: span 2;
+.span-2 {
+  grid-column: span 2;
 }
-.buttonNumbers{
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(3,1fr);
-    position: relative;
-    top: 12rem;
-    right:5rem;
-    width:20rem;
-    gap: 1rem;
-    
+.buttonNumbers {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  top: 12rem;
+  right: 5rem;
+  width: 20rem;
+  gap: 1rem;
 }
-.number:hover, .sign:hover, .dot:hover{
-    background-color: rgb(175, 173, 173);
+.number:hover,
+.sign:hover,
+.dot:hover {
+  background-color: rgb(175, 173, 173);
 }
-.buttonSigns{
-    display: grid;
-    gap:1rem;
-    position: relative;
-    width:7rem;
-    left:17rem;
-    bottom:15rem;
-    border-radius: 100%;
-    font-family: 'Poiret One', cursive;
-    font-size: 90px;
-    height:27rem;
+.buttonSigns {
+  display: grid;
+  gap: 1rem;
+  position: relative;
+  width: 7rem;
+  left: 17rem;
+  bottom: 15rem;
+  border-radius: 100%;
+  font-family: "Poiret One", cursive;
+  font-size: 90px;
+  height: 27rem;
 }
-.number{
-    border-radius: 50%;
-    font-family: 'Poiret One', cursive;
-    font-size: 30px;
-    height:6rem;
+.number {
+  border-radius: 50%;
+  font-family: "Poiret One", cursive;
+  font-size: 30px;
+  height: 6rem;
 }
-.sign, .clear, .equal, .dot{
-    font-family: 'Poiret One', cursive;
-    font-size: 25px;
-    border-radius:100px ;
+.sign,
+.clear,
+.equal,
+.dot {
+  font-family: "Poiret One", cursive;
+  font-size: 25px;
+  border-radius: 100px;
 }
-.clear, .equal{
-    background-color: orangered;
+.clear,
+.equal {
+  background-color: orangered;
 }
-.footer{
-    font-size: 25px;
-    text-align: left;
+.footer {
+  font-size: 25px;
+  text-align: left;
 }

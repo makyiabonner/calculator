@@ -1,29 +1,36 @@
-const number = document.querySelectorAll('.number');
-const sign = document.querySelectorAll('.sign');
-const display = document.querySelector('.display');
-const clear = document.querySelector('.clear');
-const equal = document.querySelector('.equal');
-const dot = document.querySelector('.dot');
+const number = document.querySelectorAll(".number");
+const sign = document.querySelectorAll(".sign");
+const display = document.querySelector(".display");
+const clear = document.querySelector(".clear");
+const equal = document.querySelector(".equal");
+const dot = document.querySelector(".dot");
 
 // button number inputs
-number.forEach((number) => number.addEventListener('click', () => displayScreen(number.textContent)));
-dot.onclick = () => decimal('.');
+number.forEach((number) =>
+  number.addEventListener("click", () => displayScreen(number.textContent))
+);
+dot.onclick = () => decimal(".");
 // Operator button inputs
-sign.forEach((sign) => sign.addEventListener('click', () => operate(sign.textContent)));
+sign.forEach((sign) =>
+  sign.addEventListener("click", () => operate(sign.textContent))
+);
 clear.onclick = () => clearAll();
-equal.onclick = () => display.textContent = calculate(operator, previousOperand, currentOperand);
+equal.onclick = () =>
+  (display.textContent = calculate(operator, previousOperand, currentOperand));
 
 // Storage for First and Second Operand;
-let currentOperand = ' ';
-let previousOperand = ' ';
-let operator = ' ';
+let currentOperand = " ";
+let previousOperand = " ";
+let operator = " ";
 let dotCount = 0;
 
 // Decimal button input
 function decimal(dots) {
-  if (dots = '.') { dotCount++; }
+  if ((dots = ".")) {
+    dotCount++;
+  }
   if (dotCount == 1) {
-    currentOperand += '.';
+    currentOperand += ".";
     display.textContent = currentOperand;
   }
 }
@@ -39,9 +46,14 @@ function displayScreen(num) {
 // Making Operative buttons functional and Collecting First Operand
 function operate(op) {
   operator = op;
-  if (operator == '+' || operator == '-' || operator == '*' || operator == '/') {
+  if (
+    operator == "+" ||
+    operator == "-" ||
+    operator == "*" ||
+    operator == "/"
+  ) {
     previousOperand = currentOperand;
-    currentOperand = ' ';
+    currentOperand = " ";
     dotCount = 0;
   }
 }
@@ -51,21 +63,21 @@ function calculate(operator, a, b) {
   a = Number(a);
   b = Number(b);
   switch (operator) {
-    case '*':
-      return currentOperand = a * b;
-    case '/':
-      return currentOperand = a / b;
-    case '+':
-      return currentOperand = a + b;
-    case '-':
-      return currentOperand = a - b;
+    case "*":
+      return (currentOperand = a * b);
+    case "/":
+      return (currentOperand = a / b);
+    case "+":
+      return (currentOperand = a + b);
+    case "-":
+      return (currentOperand = a - b);
   }
 }
 
 // Clear button inputs
 function clearAll() {
-  previousOperand = '';
-  currentOperand = '';
+  previousOperand = "";
+  currentOperand = "";
   dotCount = 0;
-  display.textContent = '';
+  display.textContent = "";
 }
